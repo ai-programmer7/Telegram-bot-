@@ -12,8 +12,6 @@ col = db["employees"]
 with open("dump/sampleDB/sample_collection.bson", "rb") as f:
     data = bson.decode_all(f.read())
 
-
-col.drop()
 col.insert_many(data)
 
 
